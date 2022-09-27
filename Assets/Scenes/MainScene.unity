@@ -167,7 +167,7 @@ GameObject:
   - component: {fileID: 561346177}
   - component: {fileID: 561346178}
   m_Layer: 0
-  m_Name: MainGO
+  m_Name: SceneContext
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

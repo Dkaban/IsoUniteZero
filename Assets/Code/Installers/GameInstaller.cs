@@ -13,8 +13,6 @@ namespace Code.Installers
         {
             _sceneContext = GetComponent<SceneContext>();
             _sceneContext.PostInstall += InitGame;
-            
-            Container.Bind<IsoWorldManager>().AsSingle();
         }
 
         private void InitGame()
