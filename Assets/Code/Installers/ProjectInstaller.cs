@@ -9,7 +9,8 @@ namespace Code.Installers
     {
         public override void InstallBindings()
         {
-            Container.Bind<IsoWorldManager>().AsSingle();
+            //Can Init API's here, anything that needs to be done at the start of the game
+            Container.Bind<WorldManager>().AsSingle();
         }
     }
 }

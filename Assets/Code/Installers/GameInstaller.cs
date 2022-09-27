@@ -5,7 +5,6 @@ namespace Code.Installers
 {
     public class GameInstaller : MonoInstaller
     {
-        [SerializeField] private GameObject playerPrefab;
         private SceneContext _sceneContext;
         
         public override void InstallBindings()
@@ -16,8 +15,6 @@ namespace Code.Installers
 
         private void InitGame()
         {
-            Container.InstantiatePrefab(playerPrefab);
-            
             _sceneContext.PostInstall -= InitGame;
         }
     }
