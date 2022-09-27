@@ -4,8 +4,8 @@ using Zenject;
 
 namespace Code.Installers
 {
-    [CreateAssetMenu(fileName = "WorldInstaller", menuName = "Installers/WorldInstaller")]
-    public class WorldInstaller : ScriptableObjectInstaller<WorldInstaller>
+    [CreateAssetMenu(fileName = "ProjectInstaller", menuName = "Installers/ProjectInstaller")]
+    public class ProjectInstaller : ScriptableObjectInstaller<ProjectInstaller>
     {
         public override void InstallBindings()
         {
