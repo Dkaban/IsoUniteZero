@@ -1,3 +1,4 @@
+using Code.Managers;
 using UnityEngine;
 using Zenject;
 
@@ -5,6 +6,7 @@ namespace Code.Installers
 {
     public class GameInstaller : MonoInstaller
     {
+        [Inject] private IsoWorldManager _isoWorldManager;
         [SerializeField] private GameObject playerPrefab;
         private SceneContext _sceneContext;
 
@@ -19,8 +21,8 @@ namespace Code.Installers
 
         private void InitGame()
         {
-            Container.InstantiatePrefab(playerPrefab);
-
+            _isoWorldManager.PlayerObject = Container.InstantiatePrefab(playerPrefab);
+            
             _sceneContext.PostInstall -= InitGame;
         }
     }
