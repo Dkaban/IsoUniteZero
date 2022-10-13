@@ -1,14 +1,16 @@
-using Zenject;
+using UnityEngine;
 
 namespace Code.Player.StateMachine
 {
-    public sealed class PlayerStateMachine : MonoInstaller
+    public class PlayerStateMachine : MonoBehaviour
     {
         private IPlayerState _currentState;
-
+        [SerializeField] private PlayerData PlayerData;
+        
         private void Start()
         {
             ChangeState(new IdleState());
+            PlayerData = Resources.Load<PlayerData>("PlayerData");
         }
 
         private void Update()

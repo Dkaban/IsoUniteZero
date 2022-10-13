@@ -1,4 +1,3 @@
-using Code.Player.StateMachine;
 
 namespace Code.Player.StateMachine
 {
